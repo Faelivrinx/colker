@@ -50,7 +50,7 @@ func main() {
 		Filters: eventFilter,
 	})
 
-	notifier.Send(ctx, "Docker dogger started for listening!")
+	notifier.Send(ctx, "Colker started for listening!")
 
 	for message := range messages {
 		var (
