@@ -1,6 +1,6 @@
-# Docker Dogger
+# Colker
 
-Docker Dogger is a small Go application that listens to Docker container events (`create`, `start`, `die`) and sends notifications to your favorite channel (for now, it's limited to `stdout`). The tool is useful for monitoring the health status of Docker containers and notifying you when containers are created, started, or stopped. It also manages health checks for specific containers after starting.
+Colker is a small Go application that listens to Docker container events (`create`, `start`, `die`) and sends notifications to your favorite channel (for now, it's limited to `stdout`). The tool is useful for monitoring the health status of Docker containers and notifying you when containers are created, started, or stopped. It also manages health checks for specific containers after starting.
 
 ## Features
 
@@ -27,19 +27,19 @@ Docker Dogger is a small Go application that listens to Docker container events 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/docker-dogger.git
-   cd docker-dogger
+   git clone https://github.com/Faelivrinx/colker.git
+   cd colker
    ```
 
 2. Build the application:
 
    ```bash
-   go build -o docker-dogger
+   go build -o colker
    ```
 
 3. Run the application:
    ```bash
-   ./docker-dogger
+   ./colker
    ```
 
 Make sure Docker is running on your system for the tool to listen to Docker events.
@@ -70,6 +70,6 @@ secret:
 
 ### Contributing
 
-Contributions are very welcome! If you'd like to contribute to Docker Dogger, feel free to fork the repository, make changes, and submit a pull request.
+Contributions are very welcome! If you'd like to contribute to Colker, feel free to fork the repository, make changes, and submit a pull request.
 
 You can easily extend the functionality by adding new notifiers (for example, Slack, email, etc.). To do this, you would need to implement the Notifier interface found in the internal package.
