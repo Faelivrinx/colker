@@ -44,6 +44,14 @@ Colker is a small Go application that listens to Docker container events (`creat
 
 Make sure Docker is running on your system for the tool to listen to Docker events.
 
+### Make
+
+After cloning the repository, it is possible to use `make` tool, which automates running and building flows.
+
+```bash
+make run # run a project
+```
+
 ## Configuration
 
 The application uses a `config.yaml` file to specify containers, health check URLs, messages, and secrets.
