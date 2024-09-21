@@ -12,8 +12,6 @@ Docker Dogger is a small Go application that listens to Docker container events 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
 - [Example Configuration](#example-configuration)
 - [Contributing](#contributing)
 
