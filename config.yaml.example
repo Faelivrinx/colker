@@ -1,0 +1,11 @@
+containers:
+  - name: "container_name"
+    status_url: "http://<ip>:<port>/"
+
+messages:
+  start_message: "🚀 starting %v version: %v"
+  stop_message: "🔴 %v is stopped"
+  final_message: "🟢 %v is ready to work"
+
+secret:
+  secret_value: "my_secret_token_12345"
