@@ -9,3 +9,8 @@ messages:
 
 secret:
   secret_value: "my_secret_token_12345"
+
+webhooks:
+  - url: <webhook_url>
+    name: ms-teams
+    enabled: true

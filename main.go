@@ -9,6 +9,7 @@ import (
 
 	"dominikdev.com/dogger/config"
 	"dominikdev.com/dogger/internal"
+	"dominikdev.com/dogger/internal/api"
 	"github.com/docker/docker/api/types/events"
 	"github.com/docker/docker/api/types/filters"
 	nativeDockerClient "github.com/docker/docker/client"
@@ -39,7 +40,9 @@ func main() {
 	eventFilter.Add("action", "destroy")
 
 	var notifier internal.Notifier
-	notifier = &internal.StdoutNotifier{}
+	notifier = &internal.RESTNotifier{Webhooks: config.Webhooks, BodyProviders: map[string]api.BodyProvider{
+		"ms-teams": &api.MsTeamsProvider{},
+	}}
 	listenerManager := internal.NewHealthCheckManager(config.Messages.FinalMessage, notifier)
 	// go listenerManager.DisplayState()
 

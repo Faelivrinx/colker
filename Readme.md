@@ -74,7 +74,14 @@ messages:
 
 secret:
   secret_value: "my_secret_value"
+
+webhooks:
+  - url: <webhook_url>
+    name: ms-teams
+    enabled: true
 ```
+
+`webhooks.name` is important when building request body. It allows to select a proper `api.BodyProvider`.
 
 ### Contributing
 

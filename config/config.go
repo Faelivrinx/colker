@@ -11,6 +11,7 @@ type Config struct {
 	Messages   Messages    `yaml:"messages"`
 	Secret     Secret      `yaml:"secret"`
 	Containers []Container `yaml:"containers"`
+	Webhooks   []Hook      `yaml:"webhooks"`
 }
 
 type Container struct {
@@ -26,6 +27,12 @@ type Messages struct {
 
 type Secret struct {
 	SecretValue string `yaml:"secret_value"`
+}
+
+type Hook struct {
+	Url     string `yaml:"url"`
+	Name    string `yaml:"name"`
+	Enabled bool   `yaml:"enabled"`
 }
 
 func LoadConfig(filename string) (*Config, error) {
